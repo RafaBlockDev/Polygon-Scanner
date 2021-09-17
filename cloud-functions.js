@@ -11,5 +11,7 @@ Moralis.Cloud.define("getTransactions", function(request) {
 })
 
 Moralis.Cloud.define("HelloWorld", function(request) {
-    const name =
+    const name = request.params.name;
+    const logger = Moralis.Cloud.getLogger();
+    logger.info("Hello world" + name + "!");
 })
